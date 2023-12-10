@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/backimg"
+        android:layout_width="10dp"
+        android:layout_height="20dp"
+        android:background="@drawable/wlsback"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="일정 정보"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/font"
+        android:textColor="@color/bg"
+        android:textSize="18sp"/>
+    <TextView
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="뺄까요? "
+        android:fontFamily="@font/font"
+        android:textSize="18sp"
+        android:layout_below="@+id/backimg"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/ment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="일정에 해당 장소들이 포함될 수 있어요!"
+        android:layout_below="@+id/minus"
+        android:fontFamily="@font/font_p"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:textSize="15sp"
+        android:textColor="@color/bg"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/minusview"
+        android:layout_width="370dp"
+        android:layout_height="370dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ment"
+        android:layout_marginTop="20dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/againBtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/minusview"
+        android:layout_toStartOf="@+id/title"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/loginbox"
+        android:backgroundTint="@color/wg"
+        android:text="새로고침"
+        android:textColor="@color/jpc"
+        android:fontFamily="@font/font_p"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/finishBtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/minusview"
+        android:layout_toEndOf="@+id/title"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/loginbox"
+        android:backgroundTint="@color/wg"
+        android:text="확인"
+        android:textColor="@color/jpc"
+        android:fontFamily="@font/font_p"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+
+
+
+
+</RelativeLayout>

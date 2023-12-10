@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".place.PlaceReviewWriteActivity">
+
+    <TextView
+        android:id="@+id/placename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/font"
+        android:textColor="@color/bg"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="370dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/gray"
+        android:layout_below="@+id/placename"
+        android:layout_marginTop="20dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_toStartOf="@id/ratingText"
+                android:fontFamily="@font/font"
+                android:text="이곳의 호감도는"
+                android:textColor="@color/bg"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/ratingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.5"
+                android:textSize="25sp"
+                android:fontFamily="@font/font"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/ratingText"
+                android:fontFamily="@font/font"
+                android:text="였어요!"
+                android:textColor="@color/bg"
+                android:textSize="15sp" />
+
+            <RatingBar
+                android:id="@+id/ratingbar"
+                style="@style/CustomRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/score"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:rating="2.5"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/likeReason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이런 점이 좋아요!"
+                android:textSize="20sp"
+                android:fontFamily="@font/font"
+                android:textColor="@color/black"
+                android:layout_below="@+id/ratingbar"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/reviewHashtagGoodRecyclerView"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/likeReason"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                />
+            <!--더보기 누르면 아래로 쭈르륵-->
+            <TextView
+                android:id="@+id/hateReason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이런 점이 아쉬워요."
+                android:textSize="20sp"
+                android:fontFamily="@font/font"
+                android:textColor="@color/black"
+                android:layout_below="@+id/reviewHashtagGoodRecyclerView"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/reviewHashtagBadRecyclerView"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hateReason"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/reviewtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="후기를 남겨주세요."
+                android:textSize="20sp"
+                android:fontFamily="@font/font"
+                android:textColor="@color/black"
+                android:layout_below="@+id/reviewHashtagBadRecyclerView"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                />
+            <EditText
+                android:id="@+id/editReview"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/reviewtitle"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bigstraight"
+                android:hint="300자 이내"
+                android:padding="15dp"
+                android:gravity="top"
+                android:maxLength="300"
+                android:scrollbars="vertical"
+                />
+
+            <ImageView
+                android:id="@+id/photo_view1"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_below="@id/editReview"
+                android:layout_toStartOf="@id/photo_view2"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/picture"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/photo_view2"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_below="@id/editReview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/picture"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/photo_view3"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_below="@id/editReview"
+                android:layout_toEndOf="@id/photo_view2"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/picture"
+                android:scaleType="centerCrop"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/finishBtn"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/photo_view1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/box_size"
+                android:backgroundTint="@color/wg"
+                android:text="등록하기"
+                android:textColor="@color/jpc"
+                android:fontFamily="@font/font"
+                android:textSize="20sp"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

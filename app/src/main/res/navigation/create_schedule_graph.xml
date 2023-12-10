@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_schedule_graph"
+    app:startDestination="@id/createScheduleNeeds1Fragment">
+
+    <fragment
+        android:id="@+id/createScheduleNeeds1Fragment"
+        android:name="com.dodoojuice.jforme.zip.create.CreateScheduleNeeds1Fragment"
+        android:label="fragment_create_schedule_needs1"
+        tools:layout="@layout/fragment_create_schedule_needs1" >
+        <action
+            android:id="@+id/action_createScheduleNeeds1Fragment_to_createScheduleNeeds2Fragment"
+            app:destination="@id/createScheduleNeeds2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createScheduleNeeds3Fragment"
+        android:name="com.dodoojuice.jforme.zip.create.CreateScheduleNeeds3Fragment"
+        android:label="fragment_create_schedule_needs3"
+        tools:layout="@layout/fragment_create_schedule_needs3" >
+        <action
+            android:id="@+id/action_createScheduleNeeds3Fragment_to_createScheduleInputFragment"
+            app:destination="@id/createScheduleInputFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createScheduleNeeds2Fragment"
+        android:name="com.dodoojuice.jforme.zip.create.CreateScheduleNeeds2Fragment"
+        android:label="fragment_create_schedule_needs2"
+        tools:layout="@layout/fragment_create_schedule_needs2" >
+        <action
+            android:id="@+id/action_createScheduleNeeds2Fragment_to_createScheduleNeeds3Fragment"
+            app:destination="@id/createScheduleNeeds3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createScheduleInputFragment"
+        android:name="com.dodoojuice.jforme.zip.create.CreateScheduleInputFragment"
+        android:label="fragment_create_schedule_input"
+        tools:layout="@layout/fragment_create_schedule_input" >
+        <action
+            android:id="@+id/action_createScheduleInputFragment_to_createScheduleTimerFragment"
+            app:destination="@id/createScheduleTimerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createSchedulePlaceFragment"
+        android:name="com.dodoojuice.jforme.zip.create.CreateSchedulePlaceFragment"
+        android:label="fragment_create_schedule_place"
+        tools:layout="@layout/fragment_create_schedule_place" />
+    <fragment
+        android:id="@+id/createScheduleSetFragment"
+        android:name="com.dodoojuice.jforme.zip.create.CreateScheduleSetFragment"
+        android:label="fragment_create_schedule_set"
+        tools:layout="@layout/fragment_create_schedule_set" >
+        <action
+            android:id="@+id/action_createScheduleSetFragment_to_createSchedulePlaceFragment"
+            app:destination="@id/createSchedulePlaceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createScheduleTimerFragment"
+        android:name="com.dodoojuice.jforme.zip.create.CreateScheduleTimerFragment"
+        android:label="fragment_create_schedule_timer"
+        tools:layout="@layout/fragment_create_schedule_timer" >
+        <action
+            android:id="@+id/action_createScheduleTimerFragment_to_createScheduleSetFragment"
+            app:destination="@id/createScheduleSetFragment" />
+    </fragment>
+</navigation>

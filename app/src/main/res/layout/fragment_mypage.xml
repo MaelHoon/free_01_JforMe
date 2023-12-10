@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".mypage.MypageFragment">
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:background="@drawable/tittleback"/>
+
+    <TextView
+        android:id="@+id/mytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/font"
+        android:text="@string/mypage"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <ImageButton
+        android:id="@+id/settingImg"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/setting_icon"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp" />
+
+    <ImageButton
+        android:id="@+id/profileimg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/j_profile"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="20dp"/>
+    <TextView
+        android:id="@+id/idtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mytext"
+        android:layout_marginTop="40dp"
+        android:layout_toEndOf="@+id/profileimg"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/font"
+        android:textColor="@color/bg"
+        android:text="귀염둥이임"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/introduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileimg"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:text="낭만 여행가의 기록"
+        android:fontFamily="@font/font_p"
+        android:textStyle="bold"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/followtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idtext"
+        android:layout_marginTop="5dp"
+        android:layout_alignStart="@+id/profileimg"
+        android:layout_marginStart="71dp"
+        android:text="@string/follow"
+        android:fontFamily="@font/font_p"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idtext"
+        android:layout_alignStart="@+id/followtext"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/font"
+        android:text="@string/o"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/followingtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idtext"
+        android:layout_marginTop="5dp"
+        android:layout_alignStart="@+id/followtext"
+        android:layout_marginStart="71dp"
+        android:text="@string/following"
+        android:fontFamily="@font/font_p"
+        android:textSize="15sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idtext"
+        android:layout_alignStart="@+id/followingtext"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/font"
+        android:text="@string/o"
+        android:textSize="15sp"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_mypage"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/introduce"
+        android:layout_marginTop="30dp"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabIndicatorFullWidth="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/font"
+        />
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_below="@id/tl_mypage"
+        android:layout_centerHorizontal="true"
+        />
+
+
+</RelativeLayout>

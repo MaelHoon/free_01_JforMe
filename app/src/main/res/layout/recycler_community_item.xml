@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="40dp">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImg"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/j_profile"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp" />
+    <TextView
+        android:id="@+id/nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nickname"
+        android:textSize="10sp"
+        android:textColor="@color/bg"
+        android:fontFamily="@font/font_pre"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@id/profileImg"
+        android:layout_marginStart="5dp" />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="안녕하세요 저는 신영이에요ㅋ"
+        android:fontFamily="@font/font"
+        android:textColor="@color/bg"
+        android:textSize="15sp"
+        android:layout_below="@+id/nickname"
+        android:layout_toEndOf="@+id/profileImg"
+        android:layout_marginStart="5dp"/>
+    <ImageButton
+        android:id="@+id/option"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/option"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"/>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/photo_view"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/profileImg"
+        android:layout_marginTop="15dp"
+        />
+    <LinearLayout
+        android:id="@+id/layoutIndicators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="8dp"
+        android:layout_below="@id/photo_view"
+        />
+
+
+    <ImageButton
+        android:id="@+id/likeImg"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/like"
+        android:layout_below="@+id/photo_view"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"/>
+    <TextView
+        android:id="@+id/likeCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:layout_below="@+id/photo_view"
+        android:layout_marginTop="15dp"
+        android:textSize="10sp"
+        android:layout_toEndOf="@+id/likeImg"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/font"
+        android:textColor="@color/bg"/>
+    <ImageButton
+        android:id="@+id/commuimg"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/community"
+        android:layout_below="@id/photo_view"
+        android:layout_toEndOf="@id/likeCount"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/commentCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:layout_below="@+id/photo_view"
+        android:layout_marginTop="15dp"
+        android:textSize="10sp"
+        android:layout_toEndOf="@+id/commuimg"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/font"
+        android:textColor="@color/bg"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commentCount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="제가 이번에 개봉동에 대해 알아볼 거예요!! 개봉동 할매, 할배가 참 많은 동네죠??저도 개봉역 저가 커피에서  일하는데 참 많이 와요 ㅎ 짜증나네 민폐 개 쩔어"
+        android:textSize="13sp"
+        android:fontFamily="@font/font_p"
+        android:maxLength="90"/>
+
+    <TextView
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/commentCount"
+        android:layout_marginTop="45dp"
+        android:text="...더 보기"
+        android:textColor="@color/bg"
+        android:fontFamily="@font/font_p"
+        android:textSize="10sp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

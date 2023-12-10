@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="jpc">#db5065</color>
+    <color name="gray">#CCCCCC</color>
+    <color name="wg">#EEEEEE</color>
+    <color name="bg">#666767</color>
+    <color name="qray">#BCBCBC</color>
+    <color name="mid">#909191</color>
+    <color name="secondColor">#FFF8A5</color>
+    <color name="gmb">#848484</color>
+    <color name="red">#f9dddc</color>
+    <color name="orange">#f4dec6</color>
+    <color name="yellow">#f4f0ce</color>
+    <color name="green">#d8e4d9</color>
+    <color name="blue">#dae3e7</color>
+    <color name="navy">#dadbe5</color>
+    <color name="purple">#e7d9ea</color>
+</resources>

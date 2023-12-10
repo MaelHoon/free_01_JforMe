@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="scheduleViewModel"
+            type="com.dodoojuice.jforme.zip.schedule.ScheduleViewModel" />
+
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".zip.schedule.ScheduleFragment">
+
+        <View
+            android:id="@+id/backimg"
+            android:layout_width="410dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/back"
+            android:alpha="0.2"
+            />
+        <TextView
+            android:id="@+id/personnel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_below="@id/scheduleTitle"
+            android:bufferType="spannable"
+            android:fontFamily="@font/font_p"
+            android:text="인원 "
+            android:textColor="@color/bg"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/schedulePersonnel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/scheduleTitle"
+            android:bufferType="spannable"
+            android:layout_toEndOf="@+id/personnel"
+            android:fontFamily="@font/font_p"
+            android:text = "@{scheduleViewModel.schedulePersonnel.toString()}"
+            android:textColor="@color/bg"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/expense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/schedulePersonnel"
+            android:layout_below="@id/scheduleTitle"
+            android:bufferType="spannable"
+            android:fontFamily="@font/font_p"
+            android:text="비용 "
+            android:textColor="@color/bg"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/scheduleExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/scheduleTitle"
+            android:bufferType="spannable"
+            android:layout_toEndOf="@id/expense"
+            android:fontFamily="@font/font_p"
+            android:text = "@{scheduleViewModel.scheduleExpense.toString()}"
+            android:textColor="@color/bg"
+            android:textSize="16sp" />
+
+
+        <ImageButton
+            android:id="@+id/mapjcon"
+            android:layout_width="23dp"
+            android:layout_height="28dp"
+            android:background="@drawable/mapjcon"
+            android:layout_toStartOf="@+id/modify"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            />
+        <ImageButton
+            android:id="@+id/modify"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/modify"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="15dp"
+            />
+
+        <TextView
+            android:id="@+id/scheduleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="두근두근 강릉 여행"
+            android:textColor="@color/bg"
+            android:textSize="20sp"
+            android:fontFamily="@font/font"
+            />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/scheduleViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/backimg"/>
+
+
+
+    </RelativeLayout>
+</layout>

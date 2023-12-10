@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="scheduleViewModel"
+            type="com.dodoojuice.jforme.zip.schedule.ScheduleViewModel" />
+
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".zip.schedule.ScheduleSummaryFragment">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/schedule_summary_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </RelativeLayout>
+</layout>

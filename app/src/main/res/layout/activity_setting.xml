@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".mypage.SettingActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/j_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+    <View
+        android:id="@+id/center"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"/>
+    <ImageButton
+        android:id="@+id/changephoto"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/plus"
+        android:layout_toEndOf="@id/center"
+        android:layout_marginTop="65dp"
+        />
+    <RelativeLayout
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/changephoto"/>
+
+
+
+
+
+
+
+</RelativeLayout>

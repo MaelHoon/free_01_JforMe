@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="프로필 관리">
+
+        <!-- <Preference
+             android:key="image"
+             android:title="프로필 사진" />-->
+
+        <Preference
+            android:key="nickname"
+            android:title="닉네임 설정" />
+
+        <EditTextPreference
+            android:dialogMessage="나를 소개해주세요!"
+            android:key="introduce"
+            android:title="소개글 설정" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="알림 설정">
+
+        <SwitchPreference
+            android:key="notification_all"
+            android:title="전체 푸시 알림"
+            android:summary="모든 알림을 허용합니다." />
+
+        <SwitchPreference
+            android:key="notification_comment"
+            android:title="댓글"
+            android:summary="댓글 알림을 설정합니다." />
+
+        <SwitchPreference
+            android:key="notification_like"
+            android:title="좋아요"
+            android:summary="좋아요 알림을 설정합니다." />
+
+        <SwitchPreference
+            android:key="notification_follow"
+            android:title="새로운 팔로우"
+            android:summary="새로운 팔로우 알림을 설정합니다." />
+
+        <SwitchPreference
+            android:key="notification_event"
+            android:title="이벤트 알림"
+            android:summary="이벤트 알림을 설정합니다." />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="계정 관리">
+
+        <Preference
+            android:key="password_change"
+            android:title="비밀번호 수정" />
+
+        <Preference
+            android:key="logout"
+            android:title="로그아웃" />
+
+        <Preference
+            android:key="account_delete"
+            android:title="계정 탈퇴" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="기타">
+
+        <Preference
+            android:key= "inquiry"
+            android:title="문의하기">
+
+
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

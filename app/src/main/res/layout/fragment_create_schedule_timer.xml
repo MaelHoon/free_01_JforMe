@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".zip.create.CreateScheduleTimerFragment">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/backimg"
+        android:layout_width="10dp"
+        android:layout_height="20dp"
+        android:background="@drawable/wlsback"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="일정 정보"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/font"
+        android:textColor="@color/bg"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5/6"
+        android:layout_below="@+id/backimg"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="25dp"
+        android:textSize="25sp"
+        android:fontFamily="@font/font"
+        android:textColor="@color/jpc"/>
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기간"
+        android:fontFamily="@font/font"
+        android:textSize="20sp"
+        android:layout_below="@+id/number"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/godayshow"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/day"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="2023/10/16"
+        android:textSize="20sp"
+        android:maxLength="10"/>
+    <TextView
+        android:id="@+id/comedayshow"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/day"
+        android:layout_marginStart="60dp"
+        android:layout_toEndOf="@+id/godayshow"
+        android:layout_marginTop="20dp"
+        android:text="2023/10/23"
+        android:textSize="20sp"
+        android:maxLength="10"
+        />
+
+    <TextView
+        android:id="@+id/goday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가는 날"
+        android:layout_below="@+id/day"
+        android:fontFamily="@font/font"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:textSize="15sp"
+        android:textColor="@color/bg"/>
+    <TextView
+        android:id="@+id/wave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="~"
+        android:layout_below="@id/day"
+        android:layout_toEndOf="@+id/godayshow"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:id="@+id/comeday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오는 날"
+        android:layout_below="@+id/day"
+        android:fontFamily="@font/font"
+        android:layout_toEndOf="@+id/wave"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:textSize="15sp"
+        android:textColor="@color/bg"/>
+
+    <ImageView
+        android:id="@+id/calendar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/calendar"
+        android:layout_below="@+id/day"
+        android:layout_toEndOf="@id/comedayshow"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="시간"
+        android:fontFamily="@font/font"
+        android:textSize="20sp"
+        android:layout_below="@+id/comeday"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기본 일정 시간은 12시간 입니다."
+        android:textSize="12sp"
+        android:fontFamily="@font/font"
+        android:textColor="@color/gmb"
+        android:layout_toEndOf="@+id/time"
+        android:layout_below="@id/comeday"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/gotime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="일정 시작 시간"
+        android:fontFamily="@font/font"
+        android:textSize="15sp"
+        android:textColor="@color/bg"
+        android:layout_below="@+id/time"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <TimePicker
+        android:id="@+id/timepicker"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:timePickerMode="spinner"
+        android:layout_below="@+id/gotime"
+        android:layout_marginStart="20dp"/>
+    <TextView
+        android:id="@+id/backtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="돌아가는 시간"
+        android:fontFamily="@font/font"
+        android:textSize="15sp"
+        android:textColor="@color/bg"
+        android:layout_below="@+id/timepicker"
+        android:layout_marginStart="20dp" />
+
+    <TimePicker
+        android:id="@+id/timepicker2"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:timePickerMode="spinner"
+        android:layout_below="@+id/backtime"
+        android:layout_marginStart="20dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nextBtn"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/timepicker2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/box_size"
+        android:backgroundTint="@color/wg"
+        android:text="계속하기"
+        android:textColor="@color/jpc"
+        android:fontFamily="@font/font"
+        android:textSize="20sp"/>
+
+
+
+</RelativeLayout>

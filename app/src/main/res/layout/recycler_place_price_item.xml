@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/menuname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오징어 덮밥"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/font"
+        android:textColor="@color/bg"
+        android:textSize="15sp"/>
+    <View
+        android:id="@+id/view"
+        android:layout_width="80dp"
+        android:layout_height="1dp"
+        android:background="@color/wg"
+        android:layout_toEndOf="@+id/menuname"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/menuprice"
+        android:layout_marginStart="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+    <TextView
+        android:id="@+id/menuprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8,000원"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:textSize="15sp"
+        android:textColor="@color/bg"
+        android:fontFamily="@font/font"/>
+
+</RelativeLayout>

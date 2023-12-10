@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileimg"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/j_profile"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nickname"
+        android:layout_toEndOf="@+id/profileimg"
+        android:layout_marginStart="10dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/font"
+        android:layout_marginTop="40dp"
+        />
+    <ImageView
+        android:id="@+id/reviewPhoto2"
+        android:layout_width="115dp"
+        android:layout_height="110dp"
+        android:layout_below="@id/profileimg"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/reviewPhoto1"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:id="@+id/reviewPhoto1"
+        android:layout_width="115dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/profileimg"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:id="@+id/reviewPhoto3"
+        android:layout_width="115dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/profileimg"
+        android:layout_toEndOf="@id/reviewPhoto2"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        />
+
+
+    <TextView
+        android:id="@+id/reviewText"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/reviewback"
+        android:layout_below="@+id/reviewPhoto1"
+        android:layout_marginTop="5dp"
+        android:maxLength="300"
+        android:padding="15dp"
+        android:layout_marginBottom="20dp"/>
+
+
+</RelativeLayout>

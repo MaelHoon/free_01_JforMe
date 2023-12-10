@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".zip.create.CreateScheduleNeeds1Fragment">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/backimg"
+        android:layout_width="10dp"
+        android:layout_height="20dp"
+        android:background="@drawable/wlsback"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1/6"
+        android:layout_below="@+id/backimg"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="25dp"
+        android:textSize="25sp"
+        android:fontFamily="@font/font"
+        android:textColor="@color/jpc"/>
+
+    <View
+        android:id="@+id/coreBack"
+        android:layout_width="175dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/number"
+        android:layout_marginTop="30dp"
+        android:layout_toStartOf="@id/horizontalImg"
+        android:background="@drawable/reviewback"
+        android:backgroundTint="@drawable/btn_selector_color"
+        />
+    <View
+        android:id="@+id/horizontalImg"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true" />
+    <View
+        android:id="@+id/hotBack"
+        android:layout_width="175dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/number"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@id/horizontalImg"
+        android:background="@drawable/reviewback"
+        android:backgroundTint="@drawable/btn_selector_color"
+        />
+
+    <View
+        android:id="@+id/core"
+        android:layout_width="140dp"
+        android:layout_height="90dp"
+        android:background="@drawable/core"
+        android:layout_below="@id/number"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/coreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="일상"
+        android:fontFamily="@font/font"
+        android:textSize="23dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/core"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/coreText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="핵심만 편하게 !"
+        android:fontFamily="@font/font_p"
+        android:textStyle="bold"
+        android:textColor="@color/bg"
+        android:textSize="18dp"
+        android:layout_below="@id/coreText"
+        android:layout_marginStart="35dp"/>
+
+    <View
+        android:id="@+id/hot"
+        android:layout_width="140dp"
+        android:layout_height="90dp"
+        android:background="@drawable/hotall"
+        android:layout_below="@id/number"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="50dp"
+        android:layout_toEndOf="@id/core"/>
+
+    <TextView
+        android:id="@+id/hotText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="관광"
+        android:fontFamily="@font/font"
+        android:textSize="23dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/core"
+        android:layout_toEndOf="@+id/coreText"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/hotText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="핫한 곳은 전부 다 !"
+        android:fontFamily="@font/font_p"
+        android:textStyle="bold"
+        android:textColor="@color/bg"
+        android:textSize="18dp"
+        android:layout_toEndOf="@id/coreText2"
+        android:layout_below="@id/coreText"
+        android:layout_marginStart="90dp"/>
+
+    <View
+        android:id="@+id/ilght"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        android:background="@drawable/light"
+        android:layout_below="@id/coreBack"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="* 일상은 한 장소 주변의 장소들로 일정을 생성해요.\n\n* 관광은 거리가 좀 있더라도 핫한 곳들로 일정을 생성해요."
+        android:textColor="@color/bg"
+        android:textSize="15sp"
+        android:fontFamily="@font/font_p"
+        android:textStyle="bold"
+        android:layout_below="@+id/ilght"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nextBtn"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/loginbox"
+        android:backgroundTint="@color/wg"
+        android:text="계속하기"
+        android:textColor="@color/jpc"
+        android:fontFamily="@font/font"
+        android:textSize="20sp"/>
+
+
+
+
+</RelativeLayout>

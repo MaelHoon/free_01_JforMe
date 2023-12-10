@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.join.JoinCFragment">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="10dp"
+        android:layout_height="20dp"
+        android:background="@drawable/wlsback"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="회원가입"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/font"
+        android:textColor="@color/bg"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="선택 입력사항"
+        android:textSize="25sp"
+        android:fontFamily="@font/font"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:id="@+id/nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="닉네임"
+        android:layout_below="@id/join"
+        android:layout_marginStart="30dp"
+        android:textColor="#848484"
+        android:fontFamily="@font/font"
+        android:textSize="16sp"
+        android:layout_marginTop="25dp"/>
+
+    <EditText
+        android:id="@+id/nickname"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:background="@drawable/loginbox"
+        android:layout_below="@+id/join"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:hint="2자 이상 입력"
+        android:autofillHints="emailAddress"
+        android:paddingLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="생년월일"
+        android:layout_below="@id/nickname"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/gmb"
+        android:fontFamily="@font/font"
+        android:textSize="16sp"
+        android:layout_marginTop="25dp"/>
+
+    <NumberPicker
+        android:id="@+id/yearSpinner"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_toStartOf="@id/monthSpinner"
+        android:layout_below="@+id/year"/>
+
+    <NumberPicker
+        android:id="@+id/monthSpinner"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/year"/>
+
+    <NumberPicker
+        android:id="@+id/daySpinner"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_toEndOf="@id/monthSpinner"
+        android:layout_below="@id/year"/>
+
+    <TextView
+        android:id="@+id/sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="성별"
+        android:layout_below="@id/monthSpinner"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/gmb"
+        android:fontFamily="@font/font"
+        android:textSize="16sp"
+        android:layout_marginTop="25dp"/>
+
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/male"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/sex"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/loginbox"
+        android:backgroundTint="@drawable/btn_selector_color"
+        android:text="남성"
+        android:textColor="@drawable/text_selector_color"
+        android:fontFamily="@font/font_p"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/female"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/sex"
+        android:layout_marginTop="3dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/loginbox"
+        android:backgroundTint="@drawable/btn_selector_color"
+        android:text="여성"
+        android:textColor="@drawable/text_selector_color"
+        android:fontFamily="@font/font_p"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/finishBtn"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/male"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/loginbox"
+        android:backgroundTint="@color/wg"
+        android:text="회원가입 완료"
+        android:textColor="@color/jpc"
+        android:fontFamily="@font/font"
+        android:textSize="20sp"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.join.JoinBFragment">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="10dp"
+        android:layout_height="25dp"
+        android:background="@drawable/wlsback"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="회원가입"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/font"
+        android:textColor="@color/bg"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/pwjoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호 입력"
+        android:textSize="25sp"
+        android:fontFamily="@font/font"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호"
+        android:layout_below="@id/pwjoin"
+        android:layout_marginStart="30dp"
+        android:textColor="#848484"
+        android:fontFamily="@font/font"
+        android:textSize="16sp"
+        android:layout_marginTop="25dp"/>
+
+    <EditText
+        android:id="@+id/pw"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:background="@drawable/loginbox"
+        android:layout_below="@+id/pwjoin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:hint="8자리 이상 입력"
+        android:autofillHints="emailAddress"
+        android:paddingLeft="10dp"
+        android:drawableLeft="@drawable/ic_pw"
+        android:drawablePadding="10dp"
+        android:inputType="textPassword"/>
+
+    <TextView
+        android:id="@+id/repwtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호 확인"
+        android:layout_below="@id/pw"
+        android:layout_marginStart="30dp"
+        android:textColor="#848484"
+        android:fontFamily="@font/font"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/repw"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:background="@drawable/loginbox"
+        android:layout_below="@+id/repwtext"
+        android:layout_marginTop="3dp"
+        android:layout_centerHorizontal="true"
+        android:hint="비밀번호 재입력"
+        android:autofillHints="emailAddress"
+        android:paddingLeft="10dp"
+        android:drawableLeft="@drawable/ic_pw"
+        android:drawablePadding="10dp"
+        android:inputType="textPassword"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nextbtn2"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/repw"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/loginbox"
+        android:backgroundTint="@color/wg"
+        android:text="계속하기"
+        android:textColor="@color/jpc"
+        android:fontFamily="@font/font"
+        android:textSize="20sp"/>
+
+
+
+</RelativeLayout>

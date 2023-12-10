@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginActivity">
+
+
+    <ImageView
+        android:id="@+id/j"
+        android:layout_width="250dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/app_title"
+        android:layout_centerHorizontal="true"/>
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/j"
+        android:hint="아이디를 입력하세요."
+        android:background="@drawable/loginbox"
+        android:drawableStart="@drawable/ic_mail"
+        android:paddingLeft="10dp"
+        android:drawablePadding="10dp"/>
+
+    <EditText
+        android:id="@+id/pw"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/email"
+        android:hint="비밀번호를 입력하세요."
+        android:background="@drawable/loginbox"
+        android:drawableLeft="@drawable/ic_pw"
+        android:paddingLeft="10dp"
+        android:drawablePadding="10dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginBtn"
+        android:layout_marginTop="25dp"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/pw"
+        android:text="로그인"
+        android:fontFamily="@font/font_p"
+        android:background="@drawable/loginbox"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/jpc"/>
+
+    <TextView
+        android:id="@+id/findid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디 찾기"
+        android:layout_below="@+id/loginBtn"
+        android:textSize="15sp"
+        android:fontFamily="@font/font"
+        android:textColor="@color/bg"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="63dp"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <View
+        android:id="@+id/findidst"
+        android:layout_width="2dp"
+        android:layout_height="15dp"
+        android:background="@color/wg"
+        android:layout_toEndOf="@id/findid"
+        android:layout_below="@id/loginBtn"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/findpw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호 찾기"
+        android:layout_below="@+id/loginBtn"
+        android:textSize="15sp"
+        android:fontFamily="@font/font"
+        android:textColor="@color/bg"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/findidst"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <View
+        android:id="@+id/findpwst"
+        android:layout_width="2dp"
+        android:layout_height="15dp"
+        android:background="@color/wg"
+        android:layout_toEndOf="@id/findpw"
+        android:layout_below="@id/loginBtn"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="20dp" />
+    <TextView
+        android:id="@+id/jointext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:layout_below="@+id/loginBtn"
+        android:textSize="15sp"
+        android:fontFamily="@font/font"
+        android:textColor="@color/bg"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/findpwst"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <View
+        android:id="@+id/otherloginr"
+        android:layout_width="100dp"
+        android:layout_height="2dp"
+        android:background="@color/wg"
+        android:layout_below="@id/findpw"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_toStartOf="@id/snslogin"
+        android:layout_marginEnd="10dp"/>
+
+    <TextView
+        android:id="@+id/snslogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sns 계정으로 로그인"
+        android:textColor="@color/qray"
+        android:fontFamily="@font/font_p"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/findpw"
+        android:layout_marginTop="30dp"/>
+    <View
+        android:id="@+id/otherlogin"
+        android:layout_width="100dp"
+        android:layout_height="2dp"
+        android:background="@color/wg"
+        android:layout_below="@id/findpw"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/snslogin"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/kakaologin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/kakao_login_medium_wide"
+        android:layout_below="@id/otherloginr"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="문의 |  jy04169@gmail.com"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/font_p"
+        android:textStyle="bold"
+        android:textColor="@color/bg"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:focusable="true"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/join_graph"
+    app:startDestination="@id/joinAFragment">
+
+    <fragment
+        android:id="@+id/joinAFragment"
+        android:name="com.dodoojuice.jforme.login.join.JoinAFragment"
+        android:label="fragment_join_a"
+        tools:layout="@layout/fragment_join_a" >
+        <action
+            android:id="@+id/action_joinAFragment_to_joinBFragment"
+            app:destination="@id/joinBFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/joinBFragment"
+        android:name="com.dodoojuice.jforme.login.join.JoinBFragment"
+        android:label="fragment_join_b"
+        tools:layout="@layout/fragment_join_b" >
+        <action
+            android:id="@+id/action_joinBFragment_to_joinAFragment"
+            app:destination="@id/joinAFragment" />
+        <action
+            android:id="@+id/action_joinBFragment_to_joinCFragment"
+            app:destination="@id/joinCFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/joinCFragment"
+        android:name="com.dodoojuice.jforme.login.join.JoinCFragment"
+        android:label="fragment_join_c"
+        tools:layout="@layout/fragment_join_c" >
+        <action
+            android:id="@+id/action_joinCFragment_to_joinBFragment"
+            app:destination="@id/joinBFragment" />
+    </fragment>
+</navigation>

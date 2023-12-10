@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".place.PlaceActivity">
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:background="@drawable/tittleback"/>
+    <TextView
+        android:id="@+id/reviewtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="장소 상세"
+        android:textColor="@color/white"
+        android:fontFamily="@font/font"
+        android:textSize="25sp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_centerHorizontal="true"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/goodimg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/good"
+                android:layout_marginTop="23dp"
+                android:layout_marginStart="20dp"/>
+            <TextView
+                android:id="@+id/grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/goodimg"
+                android:layout_marginStart="10dp"
+                android:text="%d"
+                android:fontFamily="@font/font_p"
+                android:textSize="17sp"
+                android:textColor="@color/bg" />
+            <TextView
+                android:id="@+id/number5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/grade"
+                android:layout_marginStart="5dp"
+                android:text="/5"
+                android:fontFamily="@font/font_p"
+                android:textSize="17sp"
+                android:textColor="@color/bg"/>
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:layout_toEndOf="@id/number5"
+                android:layout_marginStart="10dp"
+                android:text="%d"
+                android:fontFamily="@font/font_p"
+                android:textSize="15sp"
+                android:textColor="@color/bg"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:layout_toEndOf="@id/number"
+                android:layout_marginStart="5dp"
+                android:text="@string/participation"
+                android:fontFamily="@font/font_p"
+                android:textSize="15sp"
+                android:textColor="@color/bg"/>
+            <ImageView
+                android:id="@+id/placeimg"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/wg"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/goodimg"
+                android:layout_marginTop="10dp" />
+            <TextView
+                android:id="@+id/placetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/placeimg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="하하하하하하하하하하하하하하하하"
+                android:textColor="@color/black"
+                android:fontFamily="@font/font"
+                android:textSize="20sp"
+                android:maxLength="15"/>
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/placetext"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="5dp"
+                android:text="카테고리"
+                android:textColor="@color/gmb"
+                android:fontFamily="@font/font_p"
+                android:textSize="15sp"/>
+            <ImageButton
+                android:id="@+id/wishCheck"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/placeimg"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/heart"/>
+            <TextView
+                android:id="@+id/placeaddresstext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/category"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:text="인천광역시 구로구 본오동 45아아아아아아아아아아아아아아"
+                android:maxLength="23"
+                android:textSize="15sp"
+                android:fontFamily="@font/font_p" />
+            <ImageButton
+                android:id="@+id/kakaomap"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/category"
+                android:layout_toEndOf="@id/placeaddresstext"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/kakaomap"/>
+            <View
+                android:id="@+id/pricest"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_below="@+id/placeaddresstext"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@color/wg"/>
+            <TextView
+                android:id="@+id/pricetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price"
+                android:layout_marginStart="10dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/font"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/pricest"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/priceView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pricetext"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"/>
+
+            <View
+                android:id="@+id/noticest"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_below="@+id/priceView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@color/wg"/>
+
+            <TextView
+                android:id="@+id/inquiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="문의"
+                android:textColor="@color/black"
+                android:fontFamily="@font/font"
+                android:layout_marginStart="10dp"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/noticest"/>
+            <TextView
+                android:id="@+id/numbertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="02-1111-2222"
+                android:layout_below="@+id/inquiry"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/font"
+                android:textColor="@color/bg"/>
+
+            <TextView
+                android:id="@+id/urltext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="https://docs.google.com/document/d/1YsZsdYabOQwYaZR9bXnPHUMFSjnvqSXb8hhuTqcB_Ws/edit"
+                android:layout_below="@+id/numbertext"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/font_p"
+                android:textStyle="bold"
+                android:textColor="@color/bg"/>
+
+
+
+            <View
+                android:id="@+id/inquiryst"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_below="@+id/urltext"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@color/wg"/>
+
+
+            <TextView
+                android:id="@+id/notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안내"
+                android:textColor="@color/black"
+                android:fontFamily="@font/font"
+                android:layout_marginStart="10dp"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/inquiryst"/>
+            <TextView
+                android:id="@+id/noticetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여러분의 많은 성원으로 저희 미니벨 월드가 조기 재료 소진이 잦아 브레이크 타임이 생겼습니다.\n저희 미니벨 월드에 많은 관심에 진심으로 감사드립니다."
+                android:layout_below="@+id/notice"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/font_p"
+                android:textColor="@color/bg"/>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_below="@+id/noticetext"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@color/wg"/>
+
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/bg"
+                android:fontFamily="@font/font"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager_placeReview"
+                android:layout_width="match_parent"
+                android:layout_height="700dp"
+                android:layout_below="@+id/tablayout"/>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

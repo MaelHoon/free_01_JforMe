@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true">
+
+    <View
+        android:id="@+id/backimg"
+        android:layout_width="410dp"
+        android:layout_height="140dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/back"
+        android:alpha="0.2"/>
+
+
+    <ImageView
+        android:id="@+id/wishBtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/hcon"
+        android:layout_below="@+id/palcename"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp" />
+
+
+    <ImageView
+        android:id="@+id/photo_view"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:background="@drawable/box_size"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"/>
+    <TextView
+        android:id="@+id/place_position"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:text="1"
+        android:fontFamily="@font/font"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/jpc"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/palcename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="헬로에스프레소 안산고잔"
+        android:fontFamily="@font/font"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_toEndOf="@id/photo_view"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:maxLength="12"/>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="예상 체류시간 %d분"
+        android:textSize="16dp"
+        android:fontFamily="@font/font_p"
+        android:textColor="@color/bg"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/palcename"
+        android:layout_toEndOf="@+id/photo_view"/>
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이색테마카페"
+        android:layout_below="@+id/time"
+        android:layout_toEndOf="@id/photo_view"
+        android:textSize="16sp"
+        android:textColor="@color/bg"
+        android:fontFamily="@font/font_p"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_p"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_below="@id/category"
+        android:layout_toEndOf="@id/photo_view"
+        android:layout_marginStart="10dp" />
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="10dp"
+        android:background="@drawable/underback"
+        android:layout_below="@id/category"
+        android:layout_toEndOf="@+id/address"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="5dp"/>
+
+
+
+
+</RelativeLayout>

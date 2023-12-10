@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <View
+        android:id="@+id/ooo"
+        android:layout_width="5dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ooo2"
+        android:backgroundTint="@color/jpc"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/transportation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="추천 이동수단"
+        android:fontFamily="@font/font_p"
+        android:textSize="18sp"
+        android:layout_toEndOf="@id/ooo"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="17dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/moveTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/transportation"
+        android:text="%d km (예상 소요시간 %s)"
+        android:textSize="15sp"
+        android:layout_toEndOf="@id/ooo"
+        android:layout_marginStart="20dp"/>
+
+
+</RelativeLayout>

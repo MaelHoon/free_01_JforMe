@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:background="@drawable/tittleback"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/font"
+        android:text="@string/schedule"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveBtn"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@drawable/box_size"
+        android:backgroundTint="@color/jpc"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/save"
+        android:fontFamily="@font/font"
+        android:textSize="18sp"
+        android:textColor="@color/white"/>
+
+    <View
+        android:id="@+id/dayBackground"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button11"
+        android:layout_below="@id/line"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/dayNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DAY %d"
+        android:fontFamily="@font/font"
+        android:textSize="20sp"
+        android:textColor="@color/bg"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/line"/>
+
+    <ImageButton
+        android:id="@+id/deleteBtn"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/trash"
+        android:layout_toEndOf="@id/dayNumber"
+        android:layout_marginTop="33dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/line"/>
+    <View
+        android:id="@+id/backimg"
+        android:layout_width="410dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/back"
+        android:alpha="0.2"
+        android:layout_below="@id/dayBackground"/>
+    <TextView
+        android:id="@+id/scheduleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:text="충청남도"
+        android:textColor="@color/bg"
+        android:textSize="20sp"
+        android:fontFamily="@font/font"
+        android:layout_below="@+id/dayBackground"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/scheduleName"
+        android:bufferType="spannable"
+        android:fontFamily="@font/font_p"
+        android:text="인원 %d명 비용 %s원 컨셉 %d"
+        android:textColor="@color/bg"
+        android:textSize="16sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/backimg" />
+</RelativeLayout>
